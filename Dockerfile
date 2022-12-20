@@ -1,7 +1,6 @@
 FROM amazonlinux:latest
 MAINTAINER renzdeleon67@gmail.com
-RUN yum update -y \
- yum install -y httpd \
+RUN yum update -y && yum install -y httpd \
  zip \
  unzip \
  ADD https://www.free-css.com/assets/files/free-css-templates/download/page254/photogenic.zip /var/www/html
