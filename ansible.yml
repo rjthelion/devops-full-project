@@ -1,6 +1,10 @@
 - hosts: all
   become: ec2-user
   tasks: 
+     - name: delete old deployment
+       command: /usr/bin/minikube kubectl -- delete -f /home/ec2-user/Deployment.yml
+     - name: delete old deployment
+       command: /usr/bin/minikube kubectl -- delete -f /home/ec2-user/Service.yml
      - name: create new deployment
        command: /usr/bin/minikube kubectl -- apply -f /home/ec2-user/Deployment.yml
      - name: create new service
