@@ -1,4 +1,4 @@
-FROM amazonlinux:latest
+FROM centos:latest
 MAINTAINER renzdeleon67@gmail.com
 RUN yum update -y && yum install -y httpd \
  zip \
